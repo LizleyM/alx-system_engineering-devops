@@ -1,0 +1,2 @@
+#!bin/bash
+ls -la | awk '$1 ~ /^[.]/ || $1 ~ /[0-9a-zA-Z]/ {printf("%s%s", $NF, (NR == 1 || NR == 2 || $NF ~ /\/$/ ? "/" : ", "));} END {printf("\n");}'
