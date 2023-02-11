@@ -1,2 +1,2 @@
-0 string SCHOOL School file
-!:mime School
+echo -e '0 string SCHOOL School\n
+!:mime School' > school.mgc
