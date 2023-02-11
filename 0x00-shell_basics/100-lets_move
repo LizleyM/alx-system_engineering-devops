@@ -1,7 +1,2 @@
 #!/bin/bash
-destination_dir="/tmp/u"
-for file in *; do
-  if [[ "$file" =~ ^[A-Z].* ]]; then
-  mv "$file" "$destination_dir"
-    fi
-done
+mv [[:upper:]]* /tmp/u
