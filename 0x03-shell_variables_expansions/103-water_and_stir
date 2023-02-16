@@ -1,2 +1,2 @@
 #!/bin/bash
-water_dec=$(echo "ibase=water; ${WATER}" | bc); result_bestchol=$(echo "obase=bestchol; ${water_dec} + ${STIR}" | bc)
+printf -v water_dec "%d" "0b${WATER//e/0}" ; printf -v stir_dec "%d" "0b${STIR//i/1}" ; printf -v result_bestchol "%s" "$(echo "obase=bestchol; $((water_dec + stir_dec))" | dc)"
